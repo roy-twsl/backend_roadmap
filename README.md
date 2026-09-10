@@ -1,278 +1,356 @@
+# JavaScript Backend Roadmap
+
+Based on [javascript.info](https://javascript.info)
+
+---
+
+## Overview - Main Path
+
 ```mermaid
 graph TD;
-    A[Start]-->B[Section 1 - JavaScript Fundamentals];
-
-    subgraph S1 [Section 1 - JavaScript Fundamentals]
-        B-->C[Introduction];
-        C-->D[Hello World];
-        D-->E[Code Structure];
-        E-->F[Variables];
-        F-->G[Data Types];
-        G-->H[Interaction];
-        H-->I[Type Conversions];
-        I-->J[Operators];
-        J-->K[Comparisons];
-        K-->L[Conditional Branching];
-        L-->M[Logical Operators];
-        M-->N[Nullish Coalescing];
-        N-->O[Loops];
-        O-->P[Switch];
-        P-->Q[Functions];
-        Q-->R[Function Expressions];
-        R-->S[Arrow Functions];
-        S-->T[Objects];
-        T-->U[Object Methods this];
-        U-->V[Constructors new];
-        V-->W[Optional Chaining];
-        W-->X[Symbol Type];
-        X-->Y[Object to Primitive];
-    end
-
-    Y-->Z[Section 2 - Data Types Deep Dive];
-
-    subgraph S2 [Section 2 - Data Types Deep Dive]
-        Z-->AA[Numbers];
-        AA-->AB[Strings];
-        AB-->AC[Arrays];
-        AC-->AD[Array Methods];
-        AD-->AE[Iterables];
-        AE-->AF[Map and Set];
-        AF-->AG[WeakMap WeakSet];
-        AG-->AH[Object keys values entries];
-        AH-->AI[Destructuring];
-        AI-->AJ[Date and Time];
-        AJ-->AK[JSON Methods];
-    end
-
-    AK-->AL[Section 3 - Advanced Functions];
-
-    subgraph S3 [Section 3 - Advanced Functions]
-        AL-->AM[Recursion];
-        AM-->AN[Rest Parameters];
-        AN-->AO[Spread Syntax];
-        AO-->AP[Closures];
-        AP-->AQ[var let const];
-        AQ-->AR[Global Object];
-        AR-->AS[Function Object];
-        AS-->AT[setTimeout setInterval];
-        AT-->AU[Call apply bind];
-        AU-->AV[Decorators Forwarding];
-    end
-
-    AV-->AW[Section 4 - Objects and Prototypes];
-
-    subgraph S4 [Section 4 - Objects and Prototypes]
-        AW-->AX[Property Flags];
-        AX-->AY[Getters Setters];
-        AY-->AZ[Prototypes];
-        AZ-->BA[Prototypal Inheritance];
-        BA-->BB[F.prototype];
-        BB-->BC[Native Prototypes];
-        BC-->BD[Prototype Methods];
-    end
-
-    BD-->BE[Section 5 - Classes];
-
-    subgraph S5 [Section 5 - Classes]
-        BE-->BF[Class Basic Syntax];
-        BF-->BG[Class Inheritance];
-        BG-->BH[Static Properties];
-        BH-->BI[Private Protected];
-        BI-->BJ[Extending Built-ins];
-        BJ-->BK[instanceof];
-        BK-->BL[Mixins];
-    end
-
-    BL-->BM[Section 6 - Error Handling];
-
-    subgraph S6 [Section 6 - Error Handling]
-        BM-->BN[try catch];
-        BN-->BO[Custom Errors];
-        BO-->BP[Error Object];
-        BP-->BQ[finally];
-    end
-
-    BQ-->BR[Section 7 - Promises and Async];
-
-    subgraph S7 [Section 7 - Promises and Async]
-        BR-->BS[Callbacks];
-        BS-->BT[Promise Basics];
-        BT-->BU[Promise Chaining];
-        BU-->BV[Error Handling];
-        BV-->BW[Promise API];
-        BW-->BX[Promisification];
-        BX-->BY[Microtasks];
-        BY-->BZ[async await];
-    end
-
-    BZ-->CA[Section 8 - Generators and Modules];
-
-    subgraph S8 [Section 8 - Generators and Modules]
-        CA-->CB[Generators];
-        CB-->CC[Async Iterators];
-        CC-->CD[Async Generators];
-        CD-->CE[Export Import];
-        CE-->CF[Dynamic Imports];
-    end
-
-    CF-->CG[Section 9 - Browser and DOM];
-
-    subgraph S9 [Section 9 - Browser and DOM]
-        CG-->CH[DOM Tree];
-        CH-->CI[DOM Navigation];
-        CI-->CJ[Searching Elements];
-        CJ-->CK[Node Properties];
-        CK-->CL[Attributes Properties];
-        CL-->CM[Modifying Document];
-        CM-->CN[Styles and Classes];
-        CN-->CO[Element Size Scrolling];
-        CO-->CP[Window Size];
-        CP-->CQ[Coordinates];
-    end
-
-    CQ-->CR[Section 10 - Events];
-
-    subgraph S10 [Section 10 - Events]
-        CR-->CS[Introduction to Events];
-        CS-->CT[Bubbling Capturing];
-        CT-->CU[Event Delegation];
-        CU-->CV[Browser Default Actions];
-        CV-->CW[Custom Events];
-        CW-->CX[Mouse Events];
-        CX-->CY[Keyboard Events];
-        CY-->CZ[Form Elements];
-        CZ-->DA[Focus Blur];
-        DA-->DB[Load Error Events];
-    end
-
-    DB-->DC[Section 11 - Forms and Network];
-
-    subgraph S11 [Section 11 - Forms and Network]
-        DC-->DD[Form Properties];
-        DD-->DE[Form Validation];
-        DE-->DF[Fetch API];
-        DF-->DG[FormData];
-        DG-->DH[URL Objects];
-    end
-
-    DH-->DI[Section 12 - Browser Storage];
-
-    subgraph S12 [Section 12 - Browser Storage]
-        DI-->DJ[Cookies];
-        DJ-->DK[LocalStorage];
-        DK-->DL[SessionStorage];
-        DL-->DM[IndexedDB];
-    end
-
-    DM-->DN[Section 13 - Web Components];
-
-    subgraph S13 [Section 13 - Web Components]
-        DN-->DO[Custom Elements];
-        DO-->DP[Shadow DOM];
-        DP-->DQ[Templates];
-    end
-
-    DQ-->DR[Section 14 - Regular Expressions];
-
-    subgraph S14 [Section 14 - Regular Expressions]
-        DR-->DS[Patterns Flags];
-        DS-->DT[Character Classes];
-        DT-->DU[Anchors];
-        DU-->DV[Quantifiers];
-    end
-
-    DV-->DW[Section 15 - Async Deep Dive];
-
-    subgraph S15 [Section 15 - Async Deep Dive]
-        DW-->DX[Event Loop];
-        DX-->DY[Web Workers];
-    end
-
-    DY-->DZ[Section 16 - Node.js Basics];
-
-    subgraph S16 [Section 16 - Node.js Basics]
-        DZ-->EA[What is Node.js];
-        EA-->EB[Installation];
-        EB-->EC[First Program];
-        EC-->ED[Modules in Node.js];
-        ED-->EE[npm and Packages];
-    end
-
-    EE-->EF[Section 17 - Node.js Core Modules];
-
-    subgraph S17 [Section 17 - Node.js Core Modules]
-        EF-->EG[fs File System];
-        EG-->EH[path];
-        EH-->EI[http];
-        EI-->EJ[events];
-        EJ-->EK[stream];
-        EK-->EL[os and process];
-    end
-
-    EL-->EM[Section 18 - Express.js];
-
-    subgraph S18 [Section 18 - Express.js]
-        EM-->EN[Installation];
-        EN-->EO[Routing];
-        EO-->EP[Middleware];
-        EP-->EQ[Request Response];
-        EQ-->ER[Templates Views];
-        ER-->ES[Error Handling];
-    end
-
-    ES-->ET[Section 19 - Databases];
-
-    subgraph S19 [Section 19 - Databases]
-        ET-->EU[MongoDB];
-        EU-->EV[Mongoose ODM];
-        EV-->EW[CRUD Operations];
-        EW-->EX[PostgreSQL];
-        EX-->EY[SQL Basics];
-        EY-->EZ[Database Design];
-    end
-
-    EZ-->FA[Section 20 - Authentication];
-
-    subgraph S20 [Section 20 - Authentication]
-        FA-->FB[JWT];
-        FB-->FC[Bcrypt];
-        FC-->FD[OAuth 2.0];
-        FD-->FE[Sessions];
-    end
-
-    FE-->FF[Section 21 - Testing];
-
-    subgraph S21 [Section 21 - Testing]
-        FF-->FG[Jest];
-        FG-->FH[Mocha];
-        FH-->FI[Supertest];
-        FI-->FJ[Unit Testing];
-        FJ-->FK[Integration Testing];
-        FK-->FL[E2E Testing];
-    end
-
-    FL-->FM[Section 22 - DevOps];
-
-    subgraph S22 [Section 22 - DevOps]
-        FM-->FN[Docker];
-        FN-->FO[CI CD];
-        FO-->FP[Deployment];
-        FP-->FQ[Environment Variables];
-        FQ-->FR[Logging];
-        FR-->FS[Monitoring];
-    end
-
-    FS-->FT[Section 23 - Advanced Topics];
-
-    subgraph S23 [Section 23 - Advanced Topics]
-        FT-->FU[WebSockets];
-        FU-->FV[Socket.io];
-        FV-->FW[Message Queues];
-        FW-->FX[Redis Caching];
-        FX-->FY[Microservices];
-        FY-->FZ[System Design];
-        FZ-->GA[Security Best Practices];
-    end
-
-    GA-->GB[Backend Developer];
+    A[Start]-->B[JS Fundamentals];
+    B-->C[Data Types];
+    C-->D[Advanced Functions];
+    D-->E[Objects Prototypes];
+    E-->F[Classes];
+    F-->G[Error Handling];
+    G-->H[Promises Async];
+    H-->I[Generators Modules];
+    I-->J[Browser DOM];
+    J-->K[Events];
+    K-->L[Forms Network];
+    L-->M[Browser Storage];
+    M-->N[Async Deep Dive];
+    N-->O[Node.js Basics];
+    O-->P[Node.js Core Modules];
+    P-->Q[Express.js];
+    Q-->R[Databases];
+    R-->S[Authentication];
+    S-->T[Testing];
+    T-->U[DevOps];
+    U-->V[Advanced Topics];
+    V-->W[Backend Developer];
 ```
+
+---
+
+## 1. JavaScript Fundamentals
+
+```mermaid
+graph TD;
+    A[Introduction]-->B[Hello World];
+    B-->C[Code Structure];
+    C-->D[Variables];
+    D-->E[Data Types];
+    E-->F[Interaction];
+    F-->G[Type Conversions];
+    G-->H[Operators];
+    H-->I[Comparisons];
+    I-->J[Conditional Branching];
+    J-->K[Logical Operators];
+    K-->L[Nullish Coalescing];
+    L-->M[Loops];
+    M-->N[Switch];
+    N-->O[Functions];
+    O-->P[Function Expressions];
+    P-->Q[Arrow Functions];
+    Q-->R[Objects];
+    R-->S[Object Methods this];
+    S-->T[Constructors new];
+    T-->U[Optional Chaining];
+    U-->V[Symbol Type];
+    V-->W[Object to Primitive];
+```
+
+---
+
+## 2. Data Types Deep Dive
+
+```mermaid
+graph TD;
+    A[Numbers]-->B[Strings];
+    B-->C[Arrays];
+    C-->D[Array Methods];
+    D-->E[Iterables];
+    E-->F[Map and Set];
+    F-->G[WeakMap WeakSet];
+    G-->H[Object keys values entries];
+    H-->I[Destructuring];
+    I-->J[Date and Time];
+    J-->K[JSON Methods];
+```
+
+---
+
+## 3. Advanced Functions
+
+```mermaid
+graph TD;
+    A[Recursion]-->B[Rest Parameters];
+    B-->C[Spread Syntax];
+    C-->D[Closures];
+    D-->E[var let const];
+    E-->F[Global Object];
+    F-->G[Function Object];
+    G-->H[setTimeout setInterval];
+    H-->I[Call apply bind];
+    I-->J[Decorators Forwarding];
+```
+
+---
+
+## 4. Objects and Prototypes
+
+```mermaid
+graph TD;
+    A[Property Flags]-->B[Getters Setters];
+    B-->C[Prototypes];
+    C-->D[Prototypal Inheritance];
+    D-->E[F.prototype];
+    E-->F[Native Prototypes];
+    F-->G[Prototype Methods];
+```
+
+---
+
+## 5. Classes
+
+```mermaid
+graph TD;
+    A[Class Basic Syntax]-->B[Class Inheritance];
+    B-->C[Static Properties];
+    C-->D[Private Protected];
+    D-->E[Extending Built-ins];
+    E-->F[instanceof];
+    F-->G[Mixins];
+```
+
+---
+
+## 6. Error Handling
+
+```mermaid
+graph TD;
+    A[try catch]-->B[Custom Errors];
+    B-->C[Error Object];
+    C-->D[finally];
+```
+
+---
+
+## 7. Promises and Async
+
+```mermaid
+graph TD;
+    A[Callbacks]-->B[Promise Basics];
+    B-->C[Promise Chaining];
+    C-->D[Error Handling];
+    D-->E[Promise API];
+    E-->F[Promisification];
+    F-->G[Microtasks];
+    G-->H[async await];
+```
+
+---
+
+## 8. Generators and Modules
+
+```mermaid
+graph TD;
+    A[Generators]-->B[Async Iterators];
+    B-->C[Async Generators];
+    C-->D[Export Import];
+    D-->E[Dynamic Imports];
+```
+
+---
+
+## 9. Browser and DOM
+
+```mermaid
+graph TD;
+    A[DOM Tree]-->B[DOM Navigation];
+    B-->C[Searching Elements];
+    C-->D[Node Properties];
+    D-->E[Attributes Properties];
+    E-->F[Modifying Document];
+    F-->G[Styles and Classes];
+    G-->H[Element Size Scrolling];
+    H-->I[Window Size];
+    I-->J[Coordinates];
+```
+
+---
+
+## 10. Events
+
+```mermaid
+graph TD;
+    A[Introduction to Events]-->B[Bubbling Capturing];
+    B-->C[Event Delegation];
+    C-->D[Browser Default Actions];
+    D-->E[Custom Events];
+    E-->F[Mouse Events];
+    F-->G[Keyboard Events];
+    G-->H[Form Elements];
+    H-->I[Focus Blur];
+    I-->J[Load Error Events];
+```
+
+---
+
+## 11. Forms and Network
+
+```mermaid
+graph TD;
+    A[Form Properties]-->B[Form Validation];
+    B-->C[Fetch API];
+    C-->D[FormData];
+    D-->E[URL Objects];
+```
+
+---
+
+## 12. Browser Storage
+
+```mermaid
+graph TD;
+    A[Cookies]-->B[LocalStorage];
+    B-->C[SessionStorage];
+    C-->D[IndexedDB];
+```
+
+---
+
+## 13. Web Components
+
+```mermaid
+graph TD;
+    A[Custom Elements]-->B[Shadow DOM];
+    B-->C[Templates];
+```
+
+---
+
+## 14. Regular Expressions
+
+```mermaid
+graph TD;
+    A[Patterns Flags]-->B[Character Classes];
+    B-->C[Anchors];
+    C-->D[Quantifiers];
+```
+
+---
+
+## 15. Async Deep Dive
+
+```mermaid
+graph TD;
+    A[Event Loop]-->B[Web Workers];
+```
+
+---
+
+## 16. Node.js Basics
+
+```mermaid
+graph TD;
+    A[What is Node.js]-->B[Installation];
+    B-->C[First Program];
+    C-->D[Modules in Node.js];
+    D-->E[npm and Packages];
+```
+
+---
+
+## 17. Node.js Core Modules
+
+```mermaid
+graph TD;
+    A[fs File System]-->B[path];
+    B-->C[http];
+    C-->D[events];
+    D-->E[stream];
+    E-->F[os and process];
+```
+
+---
+
+## 18. Express.js
+
+```mermaid
+graph TD;
+    A[Installation]-->B[Routing];
+    B-->C[Middleware];
+    C-->D[Request Response];
+    D-->E[Templates Views];
+    E-->F[Error Handling];
+```
+
+---
+
+## 19. Databases
+
+```mermaid
+graph TD;
+    A[MongoDB]-->B[Mongoose ODM];
+    B-->C[CRUD Operations];
+    C-->D[PostgreSQL];
+    D-->E[SQL Basics];
+    E-->F[Database Design];
+```
+
+---
+
+## 20. Authentication
+
+```mermaid
+graph TD;
+    A[JWT]-->B[Bcrypt];
+    B-->C[OAuth 2.0];
+    C-->D[Sessions];
+```
+
+---
+
+## 21. Testing
+
+```mermaid
+graph TD;
+    A[Jest]-->B[Mocha];
+    B-->C[Supertest];
+    C-->D[Unit Testing];
+    D-->E[Integration Testing];
+    E-->F[E2E Testing];
+```
+
+---
+
+## 22. DevOps
+
+```mermaid
+graph TD;
+    A[Docker]-->B[CI CD];
+    B-->C[Deployment];
+    C-->D[Environment Variables];
+    D-->E[Logging];
+    E-->F[Monitoring];
+```
+
+---
+
+## 23. Advanced Topics
+
+```mermaid
+graph TD;
+    A[WebSockets]-->B[Socket.io];
+    B-->C[Message Queues];
+    C-->D[Redis Caching];
+    D-->E[Microservices];
+    E-->F[System Design];
+    F-->G[Security Best Practices];
+```
+
+---
+
