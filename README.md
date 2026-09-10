@@ -1,4 +1,5 @@
 ```mermaid
+
 graph TD;
     A[Start]-->B[Internet Basics];
     B-->C[HTTP and HTTPS];
@@ -111,5 +112,4 @@ graph TD;
     BD-->BG;
     BE-->BG;
     BF-->BG;
-    
-    ```
+```
